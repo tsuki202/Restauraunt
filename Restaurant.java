@@ -1,25 +1,42 @@
+public class Restauraunts{
+    private String name;
+    private String[] menu;
+    private final int[] prices;
 
-
-public class Restaurant {
-    String name;
-    String[] menu;
-    int[] price;
-
-    public Restaurant(String name, String[] menu, int[] price) {
+    // Конструктор для параметрів
+    public Restauraunts(String name, String[] menu, int[] prices) {
         this.name = name;
         this.menu = menu;
-        this.price = price;
+        this.prices = prices;
     }
 
-    void MenuPrice() {
-        System.out.println(name);
-        for (int i = 0; i < menu.length; i++) {
-            System.out.println(menu[i] + ": " + price[i] +"₴");
-        }
-        System.out.println(); // Додаємо порожній рядок для відділення від наступного меню
+    // Метод для встановлення імені
+    public void setName(String name) {
+
+        this.name = name;
     }
 
+    // Метод для встановлення меню
+    public void setMenu(String[] menu) {
 
+        this.menu = menu;
+    }
+
+    // Метод для отримання цін
+    public int[] getPrices() {
+
+        return prices;
+    }
+
+    // Метод для отримання меню
+    public String[] getMenu() {
+
+        return menu;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
 
 
